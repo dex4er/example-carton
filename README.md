@@ -1,4 +1,6 @@
-Example project which uses Carton
+# Example project which uses Carton
+
+[![Build Status](https://secure.travis-ci.org/dex4er/example-carton.svg)](http://travis-ci.org/dex4er/example-carton)
 
 Usage:
 
