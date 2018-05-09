@@ -1,0 +1,7 @@
+before_script:
+  - .ci/before_script.sh
+
+test:debian:9:
+  image: debian:9
+  script:
+    - .ci/test-script.sh

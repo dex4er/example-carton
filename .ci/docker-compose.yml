@@ -1,0 +1,8 @@
+version: "3.3"
+
+services:
+  test:
+    image: debian:9
+    volumes:
+      - ..:/build
+    command: /build/.ci/run-test-in-docker-compose.sh .ci/test-script.sh
