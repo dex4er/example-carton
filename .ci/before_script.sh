@@ -20,7 +20,7 @@ apt-get -y install liblocal-lib-perl
 eval $(perl -Mlocal::lib)
 
 curl -k -L cpanmin.us | perl - App::cpanminus
-cpanm -n App::FatPacker Carton@v1.0.28 ExtUtils::MakeMaker File::pushd Socket Try::Tiny
+cpanm -n App::FatPacker Carton ExtUtils::MakeMaker File::pushd Socket Try::Tiny
 
 ./vendor-make.sh
 
