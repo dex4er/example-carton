@@ -22,9 +22,16 @@ eval $(perl -Mlocal::lib)
 curl -k -L cpanmin.us | perl - App::cpanminus
 cpanm -n App::FatPacker Carton ExtUtils::MakeMaker File::pushd Socket Try::Tiny
 
-./vendor-make.sh
+rm -rf vendor
+
+rm -f cpanfile.snapshot
+
+carton
+carton bundle
+carton fatpack
 
 eval $(perl -Mlocal::lib=--deactivate-all)
+
 rm -rf local
 
-./vendor-install.sh
+vendor/bin/carton install --deployment --cached
